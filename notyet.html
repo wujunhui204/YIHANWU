@@ -96,7 +96,7 @@
         <div class="hi"></div>
         <div class="img-box-show CenterVH" style="display: none;">
             <div class="img-show-box CenterVH">
-                <div class="img-img"><img class="img-show" src="images/Unoccupied/13.jpg"/></div>
+                <div class="img-img"><img class="img-show" src=""/></div>
             </div>
             
             <div class="close-btn"></div>
@@ -118,7 +118,7 @@
             e.preventDefault();
          //   alert()
             $('.hi').html("<style>.img-img:before{content:'"+ $(this).parent().parent().find('span').html().replaceAll('<br>',' ') +"';}</style>");
-            $('.img-show').attr('src',$(this).attr('src'));
+            $('.img-show').attr('src',$(this).attr('src').replace('images','images/nomal'));
             $('.img-box-show').fadeIn();
         });
        
