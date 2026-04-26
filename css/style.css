@@ -1,4 +1,10 @@
-
+@font-face {
+    font-family: HT;
+    src: url("../Helvetica1.ttf");
+}
+*{
+    font-family: HT;
+}
 .CenterVH{
 	/* Center slide text vertically */
 	display: -webkit-box;
@@ -149,9 +155,11 @@ html,body{
 .about .face-frame .logo-a img,
 .unoccupied .top-frame .logo-a img,
 .notyet .top-frame .logo-a img,
-.compensatorynomad .top-frame .logo-a img
+.compensatorynomad .top-frame .logo-a img,
+.press .top-frame .logo-a img,
+.selfhealing .top-frame .logo-a img
 {
-    width: 8vw;
+    width: 10vw;
 }
 
 .work .face-frame .a{
@@ -175,7 +183,7 @@ html,body{
 .about .face-frame p{    
     font-size: 1.2vw;
     color: #000;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 2vw;
 }
 .work .main-box,
@@ -220,7 +228,9 @@ html,body{
 
 .unoccupied,
 .notyet,
-.compensatorynomad
+.compensatorynomad,
+.press,
+.selfhealing
 {
     position: relative;
     padding: 4vw 6vw;
@@ -229,7 +239,9 @@ html,body{
 }
 .unoccupied .top-frame .logo-a,
 .notyet .top-frame .logo-a,
-.compensatorynomad .top-frame .logo-a
+.compensatorynomad .top-frame .logo-a,
+.press .top-frame .logo-a,
+.selfhealing .top-frame .logo-a
 {
     display: block;
     left: 0;
@@ -240,7 +252,9 @@ html,body{
 }
 .unoccupied  .top-info,
 .notyet  .top-info,
-.compensatorynomad  .top-info
+.compensatorynomad  .top-info,
+.press  .top-info,
+.selfhealing  .top-info
 {
     position: relative;
     width: 100%;
@@ -249,7 +263,9 @@ html,body{
 
 .unoccupied .top-info .l-box,
 .notyet .top-info .l-box,
-.compensatorynomad .top-info .l-box
+.compensatorynomad .top-info .l-box,
+.press .top-info .l-box,
+.selfhealing .top-info .l-box
 {
     position: relative;
     float: left;
@@ -262,16 +278,20 @@ html,body{
 }
 .unoccupied .top-info .l-box span,
 .notyet .top-info .l-box span,
-.compensatorynomad .top-info .l-box span
+.compensatorynomad .top-info .l-box span,
+.press .top-info .l-box span,
+.selfhealing .top-info .l-box span
 {
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     padding-bottom: 2px;
     border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
     margin-bottom: 2px;
 }
 .unoccupied .top-info .r-box,
 .notyet .top-info .r-box,
-.compensatorynomad .top-info .r-box
+.compensatorynomad .top-info .r-box,
+.press .top-info .r-box,
+.selfhealing .top-info .r-box
 {
     position: relative;
     float: right;
@@ -282,13 +302,18 @@ html,body{
 }
 .unoccupied .top-info .r-box p,
 .notyet .top-info .r-box p,
-.compensatorynomad .top-info .r-box p
+.compensatorynomad .top-info .r-box p,
+.press .top-info .r-box p,
+.selfhealing .top-info .r-box p
 {
     font-size: 1.2vw;
-    text-align: justify;
+    text-align: left;
+    margin: 0.5vw auto;
 }
 .unoccupied .bottom-frame,
-.notyet .bottom-frame
+.notyet .bottom-frame,
+.press .bottom-frame,
+.selfhealing .bottom-frame
 {
     margin-top: 4vw;
     font-style: italic;
@@ -296,6 +321,40 @@ html,body{
     line-height: 1.3vw;
     position: relative;
     width: 100%;
+}
+.press .bottom-frame{
+    margin-top: 0.5vw;
+}
+.selfhealing .bottom-frame .l-box{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 10%;
+    padding-left: 2.6vw;
+}
+.selfhealing .bottom-frame .r-box{
+    position: relative;
+    width: 86%;
+    right: 0;
+    top: 0;
+}
+.selfhealing .c{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
+    font-size: 1.5vw;
+    margin-bottom: 2px;
+    color: #000;
+    font-style:italic;
+}
+.selfhealing .bottom-frame .r-box .click-img{
+    width: 23.6%;
+    margin: 0.5vw;
+    float: left;
+}
+
+
+.selfhealing .bottom-frame2 .click-img{
+    width: 33%;
 }
 .compensatorynomad .bottom-frame
 {
@@ -321,9 +380,23 @@ html,body{
     padding: 1.3vw;
     box-sizing: border-box;
 }
+
+.press .img-box{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
 .notyet .img-box .img-box-line{
     width: 100%;
     margin-top: 1vw;
+}
+
+.press .img-box {
+    width: 72%;
+    margin-left: 14%;
+    height: 16vw;
+    box-sizing: border-box;
+    margin-top: 0.4vw;
 }
 .notyet .img-box .img-box-line img{
     width: 31%;
@@ -331,6 +404,14 @@ html,body{
     object-fit: contain;
     float: left;
     margin: 0 2%;
+}
+
+.press .img-box  img{
+    width: 16vw;
+    height: 100%;
+    object-fit: contain;
+    float: left;
+    margin: 0 0.2vw;
 }
 .notyet .img-box .img-box-line img:first-child{
     margin-left: 0px;
@@ -346,21 +427,28 @@ html,body{
     margin-top: 0.5vw;
 }
 .unoccupied .img-box-show,
-.notyet .img-box-show{
+.notyet .img-box-show,
+.press .img-box-show,
+.selfhealing .img-box-show
+{
     position: fixed;
     left: 0;top: 0;
     width: 100%;height: 100%;
     background-color: #000;
 }
 .unoccupied .img-box-show .img-show-box,
-.notyet .img-box-show .img-show-box{
+.notyet .img-box-show .img-show-box,
+.press .img-box-show .img-show-box,
+.selfhealing .img-box-show .img-show-box
+{
     position: relative;
     width: 80%;
     height: 80%;
     text-align: center;
 }
 .unoccupied .img-box-show .img-img,
-.notyet .img-box-show .img-img{
+.notyet .img-box-show .img-img
+{
     position: relative;
     max-width: 100%;
     height: 100%;
@@ -368,14 +456,29 @@ html,body{
     border: 1px solid #fff;
     margin-top: 3vw;
 }
+.press .img-box-show .img-img,
+.selfhealing .img-box-show .img-img
+{
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid #fff;
+}
 .unoccupied .img-box-show .img-show,
-.notyet .img-box-show .img-show{
+.notyet .img-box-show .img-show,
+.press .img-box-show .img-show,
+.selfhealing .img-box-show .img-show
+{
     position: relative;
     max-width: 100%;
     max-height: 100%;
 }
 .unoccupied .img-box-show .img-img:before,
-.notyet .img-box-show .img-img:before{
+.notyet .img-box-show .img-img:before,
+.press .img-box-show .img-img:before,
+.selfhealing .img-box-show .img-img:before
+{
     /* content: ''; */
     display: block;
     position: absolute;
@@ -389,10 +492,13 @@ html,body{
     
 }
 .unoccupied .img-box-show .close-btn,
-.notyet .img-box-show .close-btn{
+.notyet .img-box-show .close-btn,
+.press .img-box-show .close-btn,
+.selfhealing .img-box-show .close-btn
+{
     position: absolute;
-    width: 4vw;
-    height: 4vw;
+    width: 2.4vw;
+    height: 2.4vw;
     border: 2px solid #fff;
     z-index: 99;
     right: 3vw;
@@ -400,7 +506,10 @@ html,body{
     border-radius: 50%;
 }
 .unoccupied .img-box-show .close-btn::after,
-.notyet .img-box-show .close-btn::after{
+.notyet .img-box-show .close-btn::after,
+.press .img-box-show .close-btn::after,
+.selfhealing .img-box-show .close-btn::after
+{
     content: '';
     width: 60%;
     position: absolute;
@@ -411,7 +520,10 @@ html,body{
     transform: rotate(45deg);
 }
 .unoccupied .img-box-show .close-btn::before,
-.notyet .img-box-show .close-btn::before{
+.notyet .img-box-show .close-btn::before,
+.press .img-box-show .close-btn::before,
+.selfhealing .img-box-show .close-btn::before
+{
     content: '';
     height: 60%;
     position: absolute;
@@ -423,4 +535,24 @@ html,body{
 }
 .hi{
     display: none;
+}
+.vio-box{
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    max-height: 100vh;
+}
+.vio-box .mask{
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+video{
+    width: 50vw;
+    height: 50vw;
+    max-height: 100vh;
 }
