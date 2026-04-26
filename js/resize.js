@@ -31,5 +31,5 @@ const debouncedHandleResize = debounce(handleResize, 200);
 window.addEventListener('resize', handleResize);
 
 // 初始调用一次获取当前尺寸
-handleResize();
+$(function(){handleResize();});
 setTimeout(function(){ handleResize(); },500);
