@@ -32,3 +32,4 @@ window.addEventListener('resize', handleResize);
 
 // 初始调用一次获取当前尺寸
 handleResize();
+setTimeout(function(){ handleResize(); },500);
