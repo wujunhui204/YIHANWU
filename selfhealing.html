@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -85,7 +84,9 @@
         });
         $('.close-btn').bind('touchend click', function(e) {
             e.preventDefault();
-            $('.img-box-show').fadeOut();
+            $('.img-box-show').fadeOut(function(){
+                $('.img-show').attr('src','');
+            });
         });
         $('.click-img').bind('click', function(e) {
             e.preventDefault();
