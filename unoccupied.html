@@ -109,7 +109,8 @@
             e.preventDefault();
          //   alert()
             $('.hi').html("<style>.img-img:before{content:'"+ $(this).parent().find('span').html().replaceAll('<br>',' ') +"';}</style>");
-            $('.img-show').attr('src',$(this).attr('src'));
+            
+            $('.img-show').attr('src',$(this).attr('src').replace('images','images/nomal'));
             $('.img-box-show').fadeIn();
         });
        
